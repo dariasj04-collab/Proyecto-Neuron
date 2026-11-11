@@ -231,7 +231,7 @@ a.btn {
 
 }
 
-/* Home About US */
+/* CTA Section */
 
 
 
@@ -262,11 +262,72 @@ a.btn {
 
 }
 
-.cta__content-text{
+
+
+/* Features */
+
+
+
+.features__block{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: var(--size-xs);
+   max-width: var(--size-block);
+   padding: var(--size-lg) var(--size-sm);
+   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+}
+
+.features__item{
+   display: flex;
+   flex-direction: column;
+   gap: var(--size-sm);
+   padding: var(--size-sm);
+}
+
+.features__item-header{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: var(--size-sm);
+
+}
+
+/* CTA Image Right Section */
+
+
+
+
+.cta__imgright-block{
+   display: flex;
+   gap: var(--size-lg);
+   align-items: center;
+   flex-wrap: wrap;
+ 
+ 
+
+}
+
+.cta__imgright-content{
    display: flex;
    flex-direction: column;
    align-items: start;
    gap: var(--size-md);
+   flex: 1 1 320px;
+ 
+   
+
+}
+
+.cta__imgright-content-header{
+   display: flex;
+   flex-direction: column;
+   gap: var(--size-sm);
+
+
+}
+
+.cta__imgright-image{
+   flex: 1 1 320px;
 
 }
 
