@@ -244,6 +244,11 @@ a.btn {
 
 .cta__image{
    flex: 1 1 320px;
+
+   @media (max-width:768px) {
+      order: -1;  
+   }
+   
 }
 
 
@@ -270,11 +275,7 @@ a.btn {
 
 .features__block{
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: var(--size-xs);
-   max-width: var(--size-block);
-   padding: var(--size-lg) var(--size-sm);
-   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));  
 }
 
 .features__item{
@@ -285,50 +286,40 @@ a.btn {
 }
 
 .features__item-header{
-   display: flex;
-   flex-direction: row;
+   display: inline-flex;
    align-items: center;
    gap: var(--size-sm);
-
 }
 
-/* CTA Image Right Section */
 
 
 
 
-.cta__imgright-block{
-   display: flex;
-   gap: var(--size-lg);
-   align-items: center;
-   flex-wrap: wrap;
- 
- 
+/* Services */
 
-}
-
-.cta__imgright-content{
+.services__block{
    display: flex;
    flex-direction: column;
+   gap: var(--size-sm);
    align-items: start;
-   gap: var(--size-md);
-   flex: 1 1 320px;
- 
-   
-
 }
 
-.cta__imgright-content-header{
+.services__grid{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   gap: var(--size-sm);
+   padding: var(--size-sm) 0;
+   align-self: stretch;
+}
+
+.services___card{
    display: flex;
    flex-direction: column;
    gap: var(--size-sm);
 
-
-}
-
-.cta__imgright-image{
-   flex: 1 1 320px;
-
+   & img {
+      max-height: 11rem;
+   }
 }
 
 
