@@ -323,6 +323,70 @@ a.btn {
 }
 
 
+/* Prices */
+
+
+.prices__block{
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--size-sm);
+   
+
+}
+
+.prices__card{
+   display: flex;
+   flex-direction: column;
+   gap: 3rem ;
+   padding: var(--size-md);
+   background-color: var(--color-light);
+   border-radius: .3125rem;
+   flex: 1 1 280px;
+
+   @media (max-width: 768px) {
+      flex: 1 1 100%;
+   }
+
+   & ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-xs);
+   }
+
+   & li {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+   }
+
+   & li i {
+      font-size: 1.5rem;
+
+   }
+
+   & .ri-close-circle-line {
+      color: #E26868;
+
+   }
+
+   &.prices__card--black{
+      background-color: #1F1F1F;
+      color: #F3F3F3;
+   }
+}
+
+.prices__head{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--size-sm);
+
+   & .btn {
+      align-self: stretch;
+      justify-content: center;
+   }
+
+}
 
 
 
