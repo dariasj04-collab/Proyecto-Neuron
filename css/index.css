@@ -27,6 +27,7 @@ ejemplo font-size: clamp(3em, 6vw, 4rem); 5-6vw el estandar
     --color-dark: #1F1F1F;
     --color-light: #F3F3F3;
     --color-brand: #4391F0;
+    --color-error: #E26868;
 
     /* Sizes */ 
    --size-xxs: .5rem;
@@ -128,7 +129,29 @@ a.btn {
    transition: opacity .3s;
 }
 
-.menu-link{
+input, select {
+   padding: var(--size-sm);
+   border-radius: 100px;
+   background-color: var(--color-light);
+   border: 1px solid transparent; /* para que los elementos no salten a la hora de clickear*/
+
+   &:hover {
+      opacity: 80%;
+   }
+
+   &:focus {
+      border: 1px solid var(--color-dark);
+      outline: none; /* linea exterior y extra por defecto del navegador */
+   }
+
+   transition: opacity 250ms, border 250ms;
+}
+
+label:not([for=acceptance]) {
+   display: none;
+}
+
+.menu-link {
    opacity: 50%;
 
    &:hover{
@@ -328,19 +351,17 @@ a.btn {
 
 .prices__block{
    display: flex;
-   flex-wrap: wrap;
    gap: var(--size-sm);
-   
-
+   flex-wrap: wrap;
 }
 
 .prices__card{
    display: flex;
    flex-direction: column;
-   gap: 3rem ;
+   gap: var(--size-md) ; /*En Figma sería 48px*/
    padding: var(--size-md);
    background-color: var(--color-light);
-   border-radius: .3125rem;
+   border-radius: var(--radius-small);
    flex: 1 1 280px;
 
    @media (max-width: 768px) {
@@ -355,8 +376,8 @@ a.btn {
 
    & li {
       display: flex;
-      align-items: center;
-      gap: 1.25rem;
+      
+      gap: var(--size-sm);
    }
 
    & li i {
@@ -364,14 +385,13 @@ a.btn {
 
    }
 
-   & .ri-close-circle-line {
-      color: #E26868;
-
+   & .red {
+      color: var(--color-error);
    }
 
    &.prices__card--black{
-      background-color: #1F1F1F;
-      color: #F3F3F3;
+      background-color: var(--color-dark);
+      color: var(--color-light);
    }
 }
 
@@ -387,6 +407,66 @@ a.btn {
    }
 
 }
+
+/* Contact */
+
+
+
+.contact__block{
+   display: flex;
+   gap: var(--size-xs);
+   padding: var(--size-lg) var(--size-sm);
+
+}
+
+.contact__content{
+   
+
+}
+
+.form{
+   display: flex;
+   flex-direction: column;
+   gap: var(--size-sm)
+   
+}
+
+
+.form__columns{
+   display: flex;
+   gap: var(--size-sm);
+   
+}
+
+.form__field{
+   display: flex;
+   flex-direction: column;
+   gap: var(--size-xxs);
+
+   &.form__field--acceptance{
+      flex-direction: row-reverse;
+      justify-content: start;
+   }
+
+
+}
+
+
+
+.btn--submit{
+   padding: var(--size-xs) var(--size-md);
+   display: inline-flex;
+   gap: var(--size-xs) ;
+   align-items: center;
+   border-radius: 100px;
+   color: var(--color-light);
+   background-color: #4391F0;
+   border-color: var(--color-light);
+   justify-content: center;
+   
+
+}
+
 
 
 
