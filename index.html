@@ -52,7 +52,7 @@
             <div class="cta__block block">
                 <div class="cta__image">
                     <picture>
-                        <source srcset="" type="image/avif">
+                        <source srcset="Media/Home-img-1.avif" type="image/avif">
                         <source srcset="Media/Home-img-1.webp" type="image/webp">
                         <img class="img-radius" src="Media/Home-img-1.jpg">
                     </picture>
@@ -235,8 +235,11 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin" class="contact__map"></iframe>
                 <div class="contact__content">
-                    <h2>Contact with us</h2>
-                    <p>You can also check other ways to contact us on the contact page.</p>
+                    <div class="contact__heading">
+                        <h2>Contact with us</h2>
+                        <p>You can also check other ways to contact us on the contact page.</p>
+                    </div>
+                    
                     <form class="form" action="#" method="post">
                         <div class="form__columns">
                             <div class="form__field">
@@ -263,10 +266,10 @@
                             </select>
                         </div>
                         <div class="form__field form__field--acceptance">
-                            <label for="acceptance">I have read and accept the privacy policy</label>
+                            <label for="acceptance">I have read and accept the <a href="#">privacy policy</a></label>
                             <input id="acceptance" name="acceptance" type="checkbox" required>
                         </div>
-                        <button type="submit" class="btn--submit">Send <i class="ri-arrow-right-up-line"></i></button>
+                        <button class="btn btn--submit" type="submit" >Send <i class="ri-arrow-right-up-line"></i></button>
                     </form>
                 </div>
             </div>
@@ -282,8 +285,8 @@
                 <a class="btn btn--dark" href="#">Go read all our posts <i class="ri-arrow-right-up-line"></i></a>
             </div>
     
-            <div class="post__cards">
-                <div class="post__card">
+            <ul class="post__cards">
+                <li class="post__card">
                     <picture>
                         <source srcset="Media/News-1.avif" type="image/avif">
                         <source srcset="Media/News-1.webp" type="image/webp">
@@ -293,8 +296,8 @@
                     <p>Embracing digital transformation is essential for small businesses seeking growth and resilience...
                     </p>
                     <a href="#">Read more</a>
-                </div>
-                <div class="post__card">
+                </li>
+                <li class="post__card">
                     <picture>
                         <source srcset="Media/News-2.avif" type="image/avif">
                         <source srcset="Media/News-2.webp" type="image/webp">
@@ -304,8 +307,8 @@
                     <p>Cloud technologies offer flexibility, security, and scalability for all types of organizations. Learn
                         how cloud solutions...</p>
                     <a href="#">Read more</a>
-                </div>
-                <div class="post__card">
+                </li>
+                <li class="post__card">
                     <picture>
                         <source srcset="Media/News-3.avif" type="image/avif">
                         <source srcset="Media/News-3.webp" type="image/webp">
@@ -315,19 +318,38 @@
                     <p>Implementing workflow automation helps eliminate repetitive tasks and human error. Explore key
                         automation tools and...</p>
                     <a href="#">Read more</a>
-                </div>
-            </div>
+                </li>
+            </ul>
+
+               <p class="heading--h4">We write for you, with love from neuron.</p>
          
-            <p class="heading--h4">We write for you, with love from neuron.</p>
+            
             
         </div>
     </section>
-
-
-
     </main>
 
-    <footer></footer>
+    <footer class="footer section">
+        <div class="footer__block">
+    
+            <div class="footer__top">
+                <img class="footer__logo" src="Media/logo-light.svg">
+                <ul class="footer__social">
+                    <li><i class="ri-instagram-line"></i></li>
+                    <li><i class="ri-twitter-x-line"></i></li>
+                    <li><i class="ri-pinterest-line"></i></li>
+                    <li><i class="ri-linkedin-box-line"></i></li>
+                </ul>
+            </div>
+
+                <ul class="footer__policies">
+                    <li><a class="--font-link" href="#">Legal Notice</a></li>
+                    <li><a class="--font-link" href="#">Privacy Policy</a></li>
+                    <li><a class="--font-link" href="#">Cookies Policy</a></li>
+                </ul>
+        </div>
+    
+    </footer>
 
 
 </body>
