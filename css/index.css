@@ -408,34 +408,47 @@ label:not([for=acceptance]) {
 
 }
 
-/* Contact */
 
+
+/* Contact */
 
 
 .contact__block{
    display: flex;
-   gap: var(--size-xs);
+   gap: var(--size-lg);
    padding: var(--size-lg) var(--size-sm);
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.contact__map{
+   flex: 1 1 320px;
+
 
 }
 
 .contact__content{
-   
-
+   flex: 1 1 320px;
+   display: flex;
+   flex-direction: column;
+   gap: var(--size-sm);
 }
 
 .form{
    display: flex;
    flex-direction: column;
    gap: var(--size-sm)
-   
 }
-
 
 .form__columns{
    display: flex;
-   gap: var(--size-sm);
-   
+   gap: var(--size-sm); 
+
+   & .form__field{
+      flex: 1;
+      min-width: 0;
+   }
+
 }
 
 .form__field{
@@ -447,8 +460,6 @@ label:not([for=acceptance]) {
       flex-direction: row-reverse;
       justify-content: start;
    }
-
-
 }
 
 
@@ -461,11 +472,12 @@ label:not([for=acceptance]) {
    border-radius: 100px;
    color: var(--color-light);
    background-color: #4391F0;
-   border-color: var(--color-light);
+   border-color: #4391F0;
    justify-content: center;
-   
-
 }
+
+
+
 
 
 
