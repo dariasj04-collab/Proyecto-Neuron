@@ -275,6 +275,30 @@ label:not([for=acceptance]) {
 
 }
 
+.hero__background--page{
+   min-height: 300px;
+
+   & .hero__block{
+      align-items: center;
+   }
+}
+
+.hero__background--services{
+   background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/Services-banner.webp");
+}
+
+.hero__background--about{
+   background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/About-banner.webp");
+}
+
+.hero__background--news{
+   background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/News-banner.webp");
+}
+
+.hero__background--contact{
+   background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/Contact-banner.webp");
+}
+
 /* CTA Section */
 
 
@@ -565,6 +589,32 @@ label:not([for=acceptance]) {
    opacity: 80%;
 
 }
+
+
+.wait__block {
+   display: flex ;
+   flex-direction: column;
+   gap: var(--size-md);
+}
+
+
+.features--color{
+
+   & .features__block{
+      gap: var(--size-sm);
+   }
+
+   & .features__item{
+      background-color: var(--color-light);
+      padding: var(--size-sm);
+      border-radius: var(--radius-small);
+   }
+}
+
+.link--underline{
+   text-decoration: underline;
+}
+
 
 
 
