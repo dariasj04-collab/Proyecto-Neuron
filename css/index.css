@@ -60,13 +60,13 @@ ejemplo font-size: clamp(3em, 6vw, 4rem); 5-6vw el estandar
 
 }
 
-img{
+img {
    max-width: 100%;
    width: 100%;
    object-fit: cover;
 }
 
-a{
+a {
    text-decoration: none;
    color: inherit;
 }
@@ -99,7 +99,7 @@ a, .font--link {
    font: var(--font-link);
 }
 
-ul, ol{
+ul, ol {
    list-style: none;
 }
 
@@ -155,7 +155,7 @@ input, select {
       outline: none; /* linea exterior y extra por defecto del navegador */
    }
 
-   &::placeholder{
+   &::placeholder {
       font: var(--font-p);
       color: var(--color-dark);
       opacity: 30%;
@@ -209,18 +209,18 @@ label:not([for=acceptance]) {
    margin: 0 auto;
 }
 
-.header__block{
+.header__block { 
    display: flex;
    justify-content: space-between;
    align-items: center; /*hace que no se afecte el logo por el object fit cover del root*/
 }
 
-.header__logo{
+.header__logo {
    max-width: 5.75rem;
 }
 
 
-.header__nav{
+.header__nav {
    display: flex;
    gap: var(--size-md);
 
@@ -230,7 +230,7 @@ label:not([for=acceptance]) {
 
 }
 
-.mobile--menu{
+.mobile--menu {
    display: none;
 
       @media (max-width: 768px) {
@@ -241,18 +241,18 @@ label:not([for=acceptance]) {
 
 /* Hero Banner */
 
-.hero{
+.hero {
    max-width: var(--size-canvas);
    margin: 0 auto;
    padding: var(--size-xs);
 
 }
 
-.hero__background{
+.hero__background {
    background-color: var(--color-dark);
    padding: var(--size-md);
    color: var(--color-light);
-   min-height: 80vh; /* vh y se adapta a la altura de cualquier dispositivo*/
+   min-height: 80vh; /* vh y se adapta a la altura de cualquier dispositivo */
    border-radius: var(--radius-small);
    display: flex;
    flex-direction: column;
@@ -263,7 +263,7 @@ label:not([for=acceptance]) {
    background-size: cover;
 }
 
-.hero__block{
+.hero__block {
    display: flex;
    flex-direction: column;
    align-items: start;
@@ -275,52 +275,68 @@ label:not([for=acceptance]) {
 
 }
 
-.hero__background--page{
-   min-height: 300px;
+/* Banner per sections */
+
+.hero__background--page { 
+   background-color: var(--color-dark);
+   padding: var(--size-md);
+   color: var(--color-light);
+   min-height: 30vh;
+   border-radius: var(--radius-small);
 
    & .hero__block{
       align-items: center;
    }
 }
 
-.hero__background--services{
+.hero__background--services {
    background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/Services-banner.webp");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
-.hero__background--about{
+.hero__background--about {
    background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/About-banner.webp");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
-.hero__background--news{
+.hero__background--news {
    background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/News-banner.webp");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
-.hero__background--contact{
+.hero__background--contact {
    background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.8) 0%, rgba(31, 31, 31, 0.8) 100%), url("../Media/Contact-banner.webp");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
+
+
 
 /* CTA Section */
 
-
-
-.cta__block{
+.cta__block {
    display: flex;
    gap: var(--size-lg);
    align-items: center;
    flex-wrap: wrap;
 }
 
-.cta__image{
+.cta__image {
    flex: 1 1 320px;
 
    @media (max-width:768px) {
       order: -1;  
    }
-   
 }
 
-
-.cta__content{
+.cta__content {
    display: flex;
    flex-direction: column;
    align-items: start;
@@ -328,7 +344,7 @@ label:not([for=acceptance]) {
    flex: 1 1 320px;
 }
 
-.cta__content-header{
+.cta__content-header {
    display: flex;
    flex-direction: column;
    gap: var(--size-sm);
@@ -339,40 +355,54 @@ label:not([for=acceptance]) {
 
 /* Features */
 
-
-
-.features__block{
+.features__block {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));  
 }
 
-.features__item{
+.features__item {
    display: flex;
    flex-direction: column;
    gap: var(--size-sm);
    padding: var(--size-sm);
 }
 
-.features__item-header{
+.features__item-header {
    display: inline-flex;
    align-items: center;
    gap: var(--size-sm);
 }
 
+/* Contact Features  */
 
+.features--color {
 
+   & .features__block {
+      gap: var(--size-sm);
+   }
+
+   & .features__item {
+      background-color: var(--color-light);
+      padding: var(--size-sm);
+      border-radius: var(--radius-small);
+   }
+}
+
+.link--underline {
+   text-decoration: underline;
+}
 
 
 /* Services */
 
-.services__block{
+.services__block {
    display: flex;
    flex-direction: column;
    gap: var(--size-sm);
    align-items: start;
 }
 
-.services__grid{
+.services__grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
    gap: var(--size-sm);
@@ -380,7 +410,7 @@ label:not([for=acceptance]) {
    align-self: stretch;
 }
 
-.services___card{
+.services___card {
    display: flex;
    flex-direction: column;
    gap: var(--size-sm);
@@ -391,16 +421,16 @@ label:not([for=acceptance]) {
 }
 
 
+
 /* Prices */
 
-
-.prices__block{
+.prices__block {
    display: flex;
    gap: var(--size-sm);
    flex-wrap: wrap;
 }
 
-.prices__card{
+.prices__card {
    display: flex;
    flex-direction: column;
    gap: var(--size-md) ; /*En Figma sería 48px*/
@@ -440,7 +470,7 @@ label:not([for=acceptance]) {
    }
 }
 
-.prices__head{
+.prices__head {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -454,59 +484,57 @@ label:not([for=acceptance]) {
 }
 
 
-
 /* Contact */
 
-
-.contact__block{
+.contact__block {
    display: flex;
    gap: var(--size-lg);
    flex-wrap: wrap;
 }
 
-.contact__map{
+.contact__map {
    flex: 1 1 320px;
    border-radius: var(--radius-small);
    filter: grayscale(100%) ;
- 
+   border: 0;
 }
 
-.contact__content{
+.contact__content {
    flex: 1 1 320px;
    display: flex;
    flex-direction: column;
    gap: var(--size-md);
 }
 
-.contact__heading{
+.contact__heading {
    display: flex;
    flex-direction: column;
-   gap: var(--size-md);
+   gap: var(--size-sm);
 }
 
-.form{
+.form {
    display: flex;
    flex-direction: column;
    gap: var(--size-sm)
 }
 
-.form__columns{
+.form__columns {
    display: flex;
    gap: var(--size-sm); 
    flex-wrap: wrap;
 
-   & .form__field{
+   & .form__field {
       flex: 1 1 110px;
    }
 
 }
 
-.form__field{
+.form__field {
    display: flex;
    flex-direction: column;
    gap: var(--size-xxs);
 
-   &.form__field--acceptance{
+   &.form__field--acceptance {
       flex-direction: row-reverse;
       justify-content: start;
    }
@@ -515,28 +543,28 @@ label:not([for=acceptance]) {
 
 /* Posts */
 
-.post__block{
+.post__block {
    display: flex;
    flex-direction: column;
    gap: var(--size-md)  ;
    
 
 }
-.post__header{
+.post__header {
    display: flex;
    justify-content: space-between;
    align-items: center;
   
 
 }
-.post__cards{
+.post__cards {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
    gap: var(--size-sm);
    padding: var(--size-sm) 0;
 
 }
-.post__card{
+.post__card {
    display: flex;
    flex-direction: column;
    gap: var(--size-sm);
@@ -545,11 +573,11 @@ label:not([for=acceptance]) {
 
 /* Footer */
 
-.footer{
+.footer {
    padding: var(--size-xs) ;
 }
 
-.footer__block{
+.footer__block {
    background-color: var(--color-dark);
    color: var(--color-light);
    border-radius: var(--radius-small);
@@ -559,19 +587,19 @@ label:not([for=acceptance]) {
    padding: var(--size-md);
 }
 
-.footer__top{
+.footer__top {
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: var(--size-sm) 0;
 }
 
- .footer__logo{
+ .footer__logo {
    max-width: 8rem;
  }
 
 
-.footer__social{
+.footer__social {
    display: flex;
    gap: var(--size-sm);
 
@@ -582,13 +610,14 @@ label:not([for=acceptance]) {
 }
 
 
-.footer__policies{
+.footer__policies {
    display: flex;
    gap: var(--size-md);
    padding: var(--size-sm) 0;
    opacity: 80%;
-
 }
+
+/* Single text */
 
 
 .wait__block {
@@ -597,23 +626,6 @@ label:not([for=acceptance]) {
    gap: var(--size-md);
 }
 
-
-.features--color{
-
-   & .features__block{
-      gap: var(--size-sm);
-   }
-
-   & .features__item{
-      background-color: var(--color-light);
-      padding: var(--size-sm);
-      border-radius: var(--radius-small);
-   }
-}
-
-.link--underline{
-   text-decoration: underline;
-}
 
 
 
