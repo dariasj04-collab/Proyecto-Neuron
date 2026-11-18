@@ -60,6 +60,10 @@ ejemplo font-size: clamp(3em, 6vw, 4rem); 5-6vw el estandar
 
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 img {
    max-width: 100%;
    width: 100%;
