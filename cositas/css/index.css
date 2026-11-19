@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    position: relative;
+
+    background-color: #F6C9DD;
+
+    & img {
+        max-width: 300px;
+        border-radius: 150px 150px 150px 28px;
+        position: relative;
+        z-index: 1;
+    }
+
+    & .fig-1 {
+        background-color: #EE716C;
+        min-height: 300px;
+        min-width: 300px;
+        border-radius: 100px;
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+    }
+
+    & .fig-2 {
+        background-color: #FBE7A1;
+        min-height: 50px;
+        min-width: 50px;
+        border-radius: 100px;
+        position: absolute;
+        bottom: 2rem;
+        left: 3rem;
+    }
+}
