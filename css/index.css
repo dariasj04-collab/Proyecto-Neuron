@@ -20,6 +20,21 @@ ejemplo font-size: clamp(3em, 6vw, 4rem); 5-6vw el estandar
 
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
+@keyframes appear {
+   from {
+      opacity: 0;
+      filter: blur(1rem);
+      transform: translateY(2rem);
+   }
+
+   to {
+      opacity: 100%;
+      filter: blur(0);
+      transform: translateY(0);
+
+   }
+}
+
 :root{
 
     /* Colors */
@@ -50,6 +65,16 @@ ejemplo font-size: clamp(3em, 6vw, 4rem); 5-6vw el estandar
    --font-p: 400 .9375rem "Instrument Sans", sans-serif;
    --font-link: 500 .9375rem "Instrument Sans", sans-serif;
 
+}
+
+/* ===== Animation ====*/
+
+.anim-appear {
+   animation-name: appear;
+   animation-duration: 300ms;
+   animation-fill-mode: forwards;
+   animation-timing-function: linear;
+   animation-timeline: view(block 90% 0%);
 }
 
 *{
